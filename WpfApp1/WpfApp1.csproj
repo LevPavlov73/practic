@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="image\free-icon-avatar-6387915.png" />
+    <None Remove="image\free-icon-padlock-494933.png" />
+    <None Remove="image\free-icon-transparency-9761621.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="image\free-icon-avatar-6387915.png" />
+    <Resource Include="image\free-icon-padlock-494933.png" />
+    <Resource Include="image\free-icon-transparency-9761621.png" />
+  </ItemGroup>
+
+</Project>
