@@ -25,25 +25,32 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-        private void text_Копировать_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        
 
+        private void login_Click(object sender, RoutedEventArgs e)
+        {
+            var login = loginbox.Text;
+            var password = PasswordBox.Text;
+            var context = new AppDbContext();
+            var user = context.Users.SingleOrDefault(x => x.Login == login && x.Password == password);
+            if (user is null) 
+            {
+                MessageBox.Show("Неправильный логин или пароль");
+                return;
+            }
+            MessageBox.Show("Вы успешно вошли в аккаунт");
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-             
-            
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void reg_Click_1(object sender, RoutedEventArgs e)
         {
             reg reg = new reg();
             reg.Show();
             this.Hide();
         }
-        
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
     }
 

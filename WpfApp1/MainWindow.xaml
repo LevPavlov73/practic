@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Авторизация в системе" Height="450" Width="800" Background="LightCyan">
+        Title="Авторизация в системе" Height="450" Width="800" Background="LightYellow" Closing="Window_Closing">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -21,10 +21,10 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock Text="Авторизация" FontSize="30" Grid.Row="0" TextAlignment="Center" Margin="0,0,0,87" Grid.RowSpan="2" Grid.Column="1"/>
-        <TextBox x:Name="text" Grid.Row="1" TextAlignment="Center" Margin="75,20,57,17" Grid.Column="1"/>
-        <TextBox x:Name="text_Копировать" Grid.Row="2" TextAlignment="Center" Margin="75,18,57,18" Grid.Column="1"/>
-        <Button Content="Войти" FontSize="32" Background="LightBlue" Grid.Row="4" Margin="143,10,125,18" Click="Button_Click" Grid.Column="1"/>
-        <Button Content="Не зарегестрированны? Зарегестрироваться" FontSize="20"  Background="LightCyan" Grid.Row="2" Margin="0,85,0,0" Grid.RowSpan="2" Grid.Column="1" Click="Button_Click_1" />
+        <TextBox Name="loginbox" Grid.Row="1" TextAlignment="Center" Margin="75,20,57,17" Grid.Column="1"/>
+        <TextBox Name="PasswordBox" Grid.Row="2" TextAlignment="Center" Margin="75,18,57,18" Grid.Column="1"/>
+        <Button Content="Войти" FontSize="32" Background="LightBlue" Grid.Row="4" Margin="143,10,125,18" Click="login_Click" Grid.Column="1"/>
+        <Button Content="Не зарегестрированны? Зарегестрироваться" FontSize="20"  Background="LightCyan" Grid.Row="2" Margin="0,85,0,0" Grid.RowSpan="2" Grid.Column="1" Click="reg_Click_1" />
         <Image Source="/image/free-icon-avatar-6387915.png"  Grid.Row="1" Margin="101,20,491,20" Grid.ColumnSpan="2"/>
         <Image Source="/image/free-icon-padlock-494933.png"  Grid.Row="2" Margin="101,20,491,20" Grid.ColumnSpan="2"/>
         <Image Source="/image/free-icon-transparency-9761621.png"  Grid.Row="2"  Grid.Column="2" Margin="3,20,95,20"/>
