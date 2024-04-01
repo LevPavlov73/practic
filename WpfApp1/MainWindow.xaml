@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Авторизация в системе" Height="450" Width="800" Background="LightYellow" Closing="Window_Closing">
+        Title="Авторизация в системе" Height="450" Width="800" Background="LightCyan" Closing="Window_Closing">
 
     <Grid>
         <Grid.ColumnDefinitions>

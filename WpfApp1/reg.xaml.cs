@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -37,11 +38,24 @@ namespace WpfApp1
             var pass = PasswordBox.Text;
             var context = new AppDbContext();
             var user_exists = context.Users.FirstOrDefault(x => x.Login == login);
-            if (user_exists is not null)
-            {
-                MessageBox.Show("Такой пользователь уже существует");
+            if (login.Length == 0)
+            { MessageBox.Show("Введите логин!");
                 return;
             }
+            if (pass.Length == 0)
+            {
+            MessageBox.Show("Введите пароль!");
+                return;
+            }
+
+            if (user_exists is not null)
+              {
+                
+                MessageBox.Show("Такой пользователь уже существует");
+            
+                return;
+            }
+          
             var user = new user { Login = login, Password = pass };
             context.Users.Add(user);
             context.SaveChanges();
